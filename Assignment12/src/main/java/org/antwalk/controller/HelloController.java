@@ -19,7 +19,7 @@ public class HelloController {
 	@Autowired
 	ValentineDao vdao;
 
-	@RequestMapping("home")
+	@RequestMapping("/")
 	public ModelAndView askValentine(HttpServletRequest request) {
 		ModelAndView mv=new ModelAndView("home");
 		Valentine valentine=new Valentine();
@@ -41,8 +41,5 @@ public class HelloController {
 	}
 	
 	
-	@RequestMapping("/")
-	public String hello() {
-		return "hello";
-	}
+
 }
